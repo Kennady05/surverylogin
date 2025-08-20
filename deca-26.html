@@ -1,0 +1,44 @@
+<!doctype html>
+<article class="stack">
+<h4>My Entries</h4>
+<div id="mine" class="table"></div>
+</article>
+
+
+<article id="adminBlock" class="stack" hidden>
+<h4>All Entries (Admin)</h4>
+<div class="actions"><button id="dlAll" class="secondary" type="button">Download All (CSV)</button></div>
+<div id="all" class="table"></div>
+</article>
+</main>
+
+
+<script>
+const SCHEMA = [
+{ q:'N/A', name:'SurveyYear', label:'SurveyYear', value:'2026', readonly:true, max:4 },
+{ q:'N/A', name:'SurveyType', label:'SurveyType', value:'HF', readonly:true, max:2 },
+{ q:'N/A', name:'EVID', label:'EVID', max:9 },
+{ q:'N/A', name:'Form', label:'Form', max:5 },
+{ q:'6', name:'CType', label:'CType', max:6, help:'A - F All that apply' },
+{ q:'7', name:'ParentCol', label:'ParentCol', max:1, help:'A, B, or blank' },
+{ q:'8', name:'HSPrep', label:'HSPrep', max:8, help:'A - H All that apply' },
+{ q:'9', name:'Applicare', label:'Applicare', max:3, help:'A - H (Up to 3)' },
+{ q:'14A', name:'Major1', label:'Major1', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'14B', name:'Major2', label:'Major2', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'14C', name:'Major3', label:'Major3', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'11', name:'ColChar', label:'ColChar', max:19, help:'A - S All that apply' },
+{ q:'15', name:'Profession', label:'Profession', max:20, help:'A - T All that apply' },
+{ q:'10', name:'LearnExp', label:'LearnExp', max:5, help:'A - L (Up to 5)' },
+{ q:'16', name:'Expect', label:'Expect', max:5, help:'A - Q (Up to 5)' },
+{ q:'17A', name:'Denom1', label:'Denom1', max:1 },
+{ q:'17B', name:'Denom2', label:'Denom2', max:1 },
+{ q:'18', name:'Race', label:'Race', max:7, help:'A - G All that apply' },
+{ q:'12A', name:'DeclaredStateI', label:'DeclaredStateI', max:2, pattern:'[A-Z]{2}' }
+];
+</script>
+<script>
+"+document.getElementById('forms/boilerplate.js').textContent+"
+bootForm('DECA-26', SCHEMA);
+</script>
+</body>
+</html>
