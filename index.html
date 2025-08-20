@@ -1,0 +1,59 @@
+<!doctype html>
+<div class="row gap">
+<button id="openForm">Open</button>
+<button id="logout" class="secondary">Sign out</button>
+</div>
+</div>
+</section>
+</main>
+
+
+<script src="assets/auth.js"></script>
+<script>
+const FORMS = [
+'ACTFL-26','ART-26','DECA-26','FBLA-26','FCCLA-26','JROTC-26','MCO-26','NCSS-26','STEM-26'
+];
+
+
+(async function(){
+await Auth.init();
+const me = await Auth.currentUser();
+const loginSec = document.getElementById('loginSection');
+const pickSec = document.getElementById('pickerSection');
+const dropdown = document.getElementById('formDropdown');
+
+
+function toPicker(user){
+loginSec.hidden = true;
+pickSec.hidden = false;
+document.getElementById('who').textContent = user.username;
+dropdown.innerHTML = '';
+FORMS.forEach(k=>{ const o=document.createElement('option'); o.value=k; o.textContent=k; dropdown.appendChild(o); });
+}
+
+
+if(me) toPicker(me);
+
+
+document.getElementById('loginBtn').onclick = async ()=>{
+try{
+const u = document.getElementById('loginUser').value.trim();
+const p = document.getElementById('loginPass').value;
+const user = await Auth.signIn(u,p);
+toPicker(user);
+}catch(e){ alert(e.message||e); }
+};
+
+
+document.getElementById('openForm').onclick = ()=>{
+const key = dropdown.value;
+const file = key.toLowerCase()+'.html';
+location.href = 'forms/'+file;
+};
+
+
+document.getElementById('logout').onclick = async ()=>{ await Auth.signOut(); location.reload(); };
+})();
+</script>
+</body>
+</html>
