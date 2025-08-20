@@ -1,0 +1,18 @@
+<style id="assets/theme.css">
+/* Elegant background (soft indigo gradient) */
+.elegant-bg{
+min-height:100vh;
+background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #e0e7ff 100%);
+}
+.stack{display:grid;gap:1rem}
+.row{display:flex;gap:.75rem;align-items:center}
+.form-grid{grid-template-columns:1fr auto}
+.muted{opacity:.75}
+.qno{display:inline-block;min-width:3.5rem;padding:.1rem .45rem;border-radius:.5rem;background:#eef2ff;color:#3730a3;font-weight:700;text-align:center;margin-right:.5rem}
+.field{display:flex;flex-direction:column;gap:.25rem}
+.help{font-size:.8rem;opacity:.75}
+.bad{outline:2px solid #ef4444;outline-offset:1px}
+header.page{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1rem 0}
+.actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.table{width:100%;overflow:auto}
+</style>
