@@ -1,0 +1,43 @@
+<!doctype html>
+{ q:'11', name:'LearnExp', label:'LearnExp', max:5, help:'A - L (Up to 5)' },
+{ q:'17', name:'Expect', label:'Expect', max:5, help:'A - Q (Up to 5)' },
+{ q:'18A', name:'Denom1', label:'Denom1', max:1, help:'A - Z (Up to 2)' },
+{ q:'18B', name:'Denom2', label:'Denom2', max:1, help:'A - Z (Up to 2)' },
+{ q:'N/A', name:'Envir', label:'Envir', max:1, help:'A - C', pattern:'[ABC]' },
+{ q:'N/A', name:'MPlanInfo', label:'MPlanInfo', max:5, help:'A - E All that apply' },
+{ q:'N/A', name:'Mbranch', label:'Mbranch', max:6, help:'A - F All that apply' },
+{ q:'19', name:'Race', label:'Race', max:7, help:'A - G All that apply' },
+{ q:'13A', name:'DeclaredStateI', label:'DeclaredStateI', max:2, pattern:'[A-Z]{2}', help:'Valid US state/territory' },
+{ q:'13B', name:'DeclaredStateII', label:'DeclaredStateII', max:2, pattern:'[A-Z]{2}', help:'Valid US state/territory' },
+{ q:'13C', name:'DeclaredStateIII', label:'DeclaredStateIII', max:2, pattern:'[A-Z]{2}', help:'Valid US state/territory' },
+{ q:'14A1',name:'DeclaredName1', label:'DeclaredName1', max:50 },
+{ q:'14A2',name:'DeclaredState1', label:'DeclaredState1', max:2, pattern:'[A-Z]{2}' },
+{ q:'14A3',name:'DeclaredVisit1', label:'DeclaredVisit1', max:1, pattern:'Y|N', help:'Y, N, or blank' },
+{ q:'14B1',name:'DeclaredName2', label:'DeclaredName2', max:50 },
+{ q:'14B2',name:'DeclaredState2', label:'DeclaredState2', max:2, pattern:'[A-Z]{2}' },
+{ q:'14B3',name:'DeclaredVisit2', label:'DeclaredVisit2', max:1, pattern:'Y|N' },
+{ q:'14C1',name:'DeclaredName3', label:'DeclaredName3', max:50 },
+{ q:'14C2',name:'DeclaredState3', label:'DeclaredState3', max:2, pattern:'[A-Z]{2}' },
+{ q:'14C3',name:'DeclaredVisit3', label:'DeclaredVisit3', max:1, pattern:'Y|N' },
+{ q:'14D1',name:'DeclaredName4', label:'DeclaredName4', max:50 },
+{ q:'14D2',name:'DeclaredState4', label:'DeclaredState4', max:2, pattern:'[A-Z]{2}' },
+{ q:'14D3',name:'DeclaredVisit4', label:'DeclaredVisit4', max:1, pattern:'Y|N' },
+{ q:'14E1',name:'DeclaredName5', label:'DeclaredName5', max:50 },
+{ q:'14E2',name:'DeclaredState5', label:'DeclaredState5', max:2, pattern:'[A-Z]{2}' },
+{ q:'14E3',name:'DeclaredVisit5', label:'DeclaredVisit5', max:1, pattern:'Y|N' },
+{ q:'21', name:'SensitiveOptin', label:'SensitiveOptin', max:1, pattern:'Y|N|', help:'Y, N, or blank' },
+{ q:'N/A', name:'PartnerDefinedFieldOne', label:'PartnerDefinedFieldOne', max:256, help:'Preferred Parent Email' },
+{ q:'1', name:'PartnerDefinedFieldTwo', label:'PartnerDefinedFieldTwo', max:8, help:'A - H All that apply' },
+{ q:'2', name:'PartnerDefinedFieldThree', label:'PartnerDefinedFieldThree', max:1, help:'A - E' },
+{ q:'3', name:'PartnerDefinedFieldFour', label:'PartnerDefinedFieldFour', max:1, help:'A - E' },
+{ q:'4', name:'PartnerDefinedFieldFive', label:'PartnerDefinedFieldFive', max:1, help:'A - E' }
+// Remaining PartnerDefinedFieldSix..Forty can be appended similarly
+];
+</script>
+<script>
+/* inline boilerplate */
+"+document.getElementById('forms/boilerplate.js').textContent+"
+bootForm('ACTFL-26', SCHEMA);
+</script>
+</body>
+</html>
