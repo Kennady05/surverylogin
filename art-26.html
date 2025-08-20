@@ -1,0 +1,52 @@
+<!doctype html>
+const SCHEMA = [
+{ q:'N/A', name:'SurveyYear', label:'SurveyYear', value:'2026', readonly:true, max:4 },
+{ q:'N/A', name:'SurveyType', label:'SurveyType', value:'HU', readonly:true, max:2 },
+{ q:'N/A', name:'EVID', label:'EVID', max:9 },
+{ q:'N/A', name:'Form', label:'Form', max:5 },
+{ q:'N/A', name:'FirstName', label:'FirstName', max:40, required:true },
+{ q:'N/A', name:'MiddleInitial', label:'MiddleInitial', max:1 },
+{ q:'N/A', name:'LastName', label:'LastName', max:40, required:true },
+{ q:'N/A', name:'Suffix', label:'Suffix', max:8 },
+{ q:'N/A', name:'Address', label:'Address', max:64 },
+{ q:'N/A', name:'City', label:'City', max:64 },
+{ q:'N/A', name:'State', label:'State', max:2, pattern:'[A-Z]{2}' },
+{ q:'N/A', name:'Zip', label:'Zip', max:5, pattern:'\d{5}' },
+{ q:'N/A', name:'Gender', label:'Gender', max:1, help:'M/F/A', pattern:'[MFA]' },
+{ q:'N/A', name:'GradYear', label:'GradYear', max:4, help:'2026 - 2031', pattern:'20(2[6-9]|3[01])' },
+{ q:'N/A', name:'BirthYear', label:'BirthYear', max:4, help:'2006 - 2013', pattern:'200[6-9]|201[0-3]' },
+{ q:'N/A', name:'Email', label:'Email', max:255, type:'email' },
+{ q:'N/A', name:'MobilePhone', label:'MobilePhone', max:10, help:'7 to 10 Characters', pattern:'\d{7,10}' },
+{ q:'5', name:'CType', label:'CType', max:6, help:'A - F All that apply' },
+{ q:'6', name:'ParentCol', label:'ParentCol', max:1, help:'A, B, or blank' },
+{ q:'7', name:'HSPrep', label:'HSPrep', max:8, help:'A - H All that apply' },
+{ q:'8', name:'Applicare', label:'Applicare', max:3, help:'A - H (Up to 3)' },
+{ q:'13A', name:'Major1', label:'Major1', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'13B', name:'Major2', label:'Major2', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'13C', name:'Major3', label:'Major3', max:2, help:'01 - 72', pattern:'0[1-9]|[1-6][0-9]|7[0-2]' },
+{ q:'10', name:'ColChar', label:'ColChar', max:19, help:'A - S All that apply' },
+{ q:'14', name:'Profession', label:'Profession', max:20, help:'A - T All that apply' },
+{ q:'9', name:'LearnExp', label:'LearnExp', max:5, help:'A - L (Up to 5)' },
+{ q:'15', name:'Expect', label:'Expect', max:5, help:'A - Q (Up to 5)' },
+{ q:'16A', name:'Denom1', label:'Denom1', max:1 },
+{ q:'16B', name:'Denom2', label:'Denom2', max:1 },
+{ q:'17', name:'Race', label:'Race', max:7, help:'A - G All that apply' },
+{ q:'11A', name:'DeclaredStateI', label:'DeclaredStateI', max:2, pattern:'[A-Z]{2}' },
+{ q:'11B', name:'DeclaredStateII', label:'DeclaredStateII', max:2, pattern:'[A-Z]{2}' },
+{ q:'11C', name:'DeclaredStateIII', label:'DeclaredStateIII', max:2, pattern:'[A-Z]{2}' },
+{ q:'12A1',name:'DeclaredName1', label:'DeclaredName1', max:50 },
+{ q:'12A2',name:'DeclaredState1', label:'DeclaredState1', max:2, pattern:'[A-Z]{2}' },
+{ q:'12A3',name:'DeclaredVisit1', label:'DeclaredVisit1', max:1, pattern:'Y|N' },
+{ q:'19', name:'SensitiveOptin', label:'SensitiveOptin', max:1, pattern:'Y|N|', help:'Y, N, or blank' },
+{ q:'1', name:'PartnerDefinedFieldTwo', label:'PartnerDefinedFieldTwo', max:15, help:'A - O All that apply' },
+{ q:'2', name:'PartnerDefinedFieldThree', label:'PartnerDefinedFieldThree', max:21, help:'A - U All that apply' },
+{ q:'3', name:'PartnerDefinedFieldFour', label:'PartnerDefinedFieldFour', max:1, help:'A - E' },
+{ q:'4', name:'PartnerDefinedFieldFive', label:'PartnerDefinedFieldFive', max:1, help:'A - E' }
+];
+</script>
+<script>
+"+document.getElementById('forms/boilerplate.js').textContent+"
+bootForm('ART-26', SCHEMA);
+</script>
+</body>
+</html>
