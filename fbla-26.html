@@ -1,0 +1,46 @@
+<!doctype html>
+
+
+<form id="f" class="stack" onsubmit="return false;">
+<div id="fields" class="stack"></div>
+<div class="actions">
+<button id="save">Save</button>
+<button id="reset" class="secondary" type="button">Reset</button>
+<button id="dlMine" class="secondary" type="button">Download My Entries (CSV)</button>
+</div>
+</form>
+
+
+<article class="stack">
+<h4>My Entries</h4>
+<div id="mine" class="table"></div>
+</article>
+
+
+<article id="adminBlock" class="stack" hidden>
+<h4>All Entries (Admin)</h4>
+<div class="actions"><button id="dlAll" class="secondary" type="button">Download All (CSV)</button></div>
+<div id="all" class="table"></div>
+</article>
+</main>
+
+
+<script>
+const SCHEMA = [
+{ q:'N/A', name:'SurveyYear', label:'SurveyYear', value:'2026', readonly:true, max:4 },
+{ q:'N/A', name:'SurveyType', label:'SurveyType', value:'SO', readonly:true, max:2 },
+{ q:'6', name:'CType', label:'CType', max:6 },
+{ q:'7', name:'ParentCol', label:'ParentCol', max:1 },
+{ q:'8', name:'HSPrep', label:'HSPrep', max:8 },
+{ q:'9', name:'Applicare', label:'Applicare', max:3 },
+{ q:'14A', name:'Major1', label:'Major1', max:2 },
+{ q:'14B', name:'Major2', label:'Major2', max:2 },
+{ q:'14C', name:'Major3', label:'Major3', max:2 }
+];
+</script>
+<script>
+"+document.getElementById('forms/boilerplate.js').textContent+"
+bootForm('FBLA-26', SCHEMA);
+</script>
+</body>
+</html>
