@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>STEM-26</title>
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2.0.6/css/pico.min.css">
+<link rel="stylesheet" href="../assets/theme.css">
+</head>
+<body class="elegant-bg">
+<main class="container">
+<header class="page">
+<h2 id="title">STEM-26</h2>
+<div class="actions">
+<span class="muted">User: <strong id="who"></strong></span>
+<a href="../index.html" role="button" class="secondary">Back</a>
+</div>
+</header>
+
+
+<form id="f" class="stack" onsubmit="return false;">
+<div id="fields" class="stack"></div>
+<div class="actions">
+<button id="save">Save</button>
+<button id="reset" class="secondary" type="button">Reset</button>
+<button id="dlMine" class="secondary" type="button">Download My Entries (CSV)</button>
+</div>
+</form>
+
+
+<article class="stack">
+<h4>My Entries</h4>
+<div id="mine" class="table"></div>
+</article>
+
+
+<article id="adminBlock" class="stack" hidden>
+<h4>All Entries (Admin)</h4>
+<div class="actions"><button id="dlAll" class="secondary" type="button">Download All (CSV)</button></div>
+<div id="all" class="table"></div>
+</article>
+</main>
+
+
+<script>
+const SCHEMA = [
+{ q:'N/A', name:'SurveyYear', label:'SurveyYear', value:'2026', readonly:true, max:4 },
+{ q:'N/A', name:'SurveyType', label:'SurveyType', value:'HX', readonly:true, max:2 },
+{ q:'7', name:'CType', label:'CType', max:6 },
+{ q:'8', name:'ParentCol', label:'ParentCol', max:1 },
+{ q:'9', name:'HSPrep', label:'HSPrep', max:8 },
+{ q:'10', name:'Applicare', label:'Applicare', max:3 },
+{ q:'15A', name:'Major1', label:'Major1', max:2 },
+{ q:'15B', name:'Major2', label:'Major2', max:2 },
+{ q:'15C', name:'Major3', label:'Major3', max:2 }
+];
+</script>
+<script>
+"+document.getElementById('forms/boilerplate.js').textContent+"
+bootForm('STEM-26', SCHEMA);
+</script>
+</body>
+</html>
